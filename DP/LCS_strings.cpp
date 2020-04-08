@@ -60,7 +60,23 @@ int LCS_table(string X, string Y, int m , int n)
 	{
 		for (int j = 1; j <= n; j++)
 		{
-			// if current character of X and Y matches
+		int LCS_table(string X, string Y, int m , int n)
+{
+
+	// lookup table stores solution to already computed sub-problems
+	// i.e. lookup[i][j] stores the length of LCS of substring
+	// X[0..i-1] and Y[0..j-1]
+
+	// first column of the lookup table will be all 0
+	for (int i = 0; i <= m; i++)
+		lookup[i][0] = 0;
+
+	// first row of the lookup table will be all 0
+	for (int j = 0; j <= n; j++)
+		lookup[0][j] = 0;
+
+	// fill the lookup table in bottom-up manner
+	for (	// if current character of X and Y matches
 			if (X[i - 1] == Y[j - 1])
 				lookup[i][j] = lookup[i - 1][j - 1] + 1;
 
