@@ -16,8 +16,8 @@ void DFS(int node) {
 	
 	if(visited[node]) return;
 	visited[node] = true;
-	vi neighbors = graph[node];
-	FEI(i,neighbors) DFS(i);
+	vi neighbours = graph[node];
+	FEI(i,neighbours) DFS(i);
 }
 
 int main()

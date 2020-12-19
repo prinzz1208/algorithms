@@ -12,8 +12,8 @@ int main()
 	
 	int m = 4, n = 4;
 	vector<int> v[m/2];
-	int k = 0,l = 0;
-
+	//int k = 0,l = 0;
+	int k = 0;
 	for (int a = 0,b = 0,p = m,q = n; a < p || b < q; a++,b++,p--,q--)
 	{
 		for (int j = b; j < q; j++)			//FISRT ROW
@@ -32,45 +32,52 @@ int main()
 		k++;
 	}
 
-	int rot = 2;
+	//int rot = 2;
 
-    for (int i = 0; i < m/2; i++)
+    //for (int i = 0; i < m/2; i++)
+	//{
+		//rotate(v[i].begin(), v[i].begin()+rot, v[i].end());
+	//}
+	
+	//cout<<endl;
+	
+	
+	//cout<<endl;
+	//k = 0; l = 0;
+	//for (int a = 0,b = 0,p = m,q = n; a < p || b < q; a++,b++,p--,q--)
+	//{
+		//for (int j = b; j < q; j++,l++)			//FISRT ROW
+			//(ar[a][j]) = v[k][l];
+		
+		
+		//for (int i = a+1; i < p; i++,l++)		//LAST COLUMN
+			//(ar[i][q-1]) = v[k][l];
+		
+		//for (int j = q-2; j >= b; j--,l++)		//LAST ROW
+			//(ar[p-1][j]) = v[k][l];		
+		
+		
+		//for (int i = p-2; i > a; i--,l++)		//FIRST COLUMN
+			//(ar[i][b]) = v[k][l];
+		//k++;
+		//l = 0;
+	//}
+	
+	//for (int i = 0; i < m; i++)
+	//{
+		//for (int j = 0; j < n; j++)
+		//{
+			//cout<<ar[i][j]<<" ";
+		//}
+		//cout<<endl;
+	//}
+	for (int i = 0; i < m/2; i++)
 	{
-		rotate(v[i].begin(), v[i].begin()+rot, v[i].end());
+		for(int j : v[i])
+			cout << j;
+		
 	}
 	
-	cout<<endl;
-	
-	
-	cout<<endl;
-	k = 0; l = 0;
-	for (int a = 0,b = 0,p = m,q = n; a < p || b < q; a++,b++,p--,q--)
-	{
-		for (int j = b; j < q; j++,l++)			//FISRT ROW
-			(ar[a][j]) = v[k][l];
-		
-		
-		for (int i = a+1; i < p; i++,l++)		//LAST COLUMN
-			(ar[i][q-1]) = v[k][l];
-		
-		for (int j = q-2; j >= b; j--,l++)		//LAST ROW
-			(ar[p-1][j]) = v[k][l];		
-		
-		
-		for (int i = p-2; i > a; i--,l++)		//FIRST COLUMN
-			(ar[i][b]) = v[k][l];
-		k++;
-		l = 0;
-	}
-	
-	for (int i = 0; i < m; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			cout<<ar[i][j]<<" ";
-		}
-		cout<<endl;
-	}
 	
 }
 
